@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P&D Diaries </title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E💖%3C/text%3E%3C/svg%3E" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffe0ec, #ffdede);
+    }
+
+    .heart {
+      position: fixed;
+      top: -10px;
+      animation: floatDown 6s linear infinite;
+    }
+
+    @keyframes floatDown {
+      0% {
+        transform: translateY(-100px) scale(0.5);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0;
+      }
+    }
+
+    /* Animations */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .pulse { animation: pulse 3s infinite ease-in-out; }
+
+    @keyframes floatSparkle {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-30px) rotate(20deg); opacity: 0; }
+    }
+
+    .sparkle {
+      position: absolute;
+      font-size: 1.5rem;
+      animation: floatSparkle 4s infinite ease-in-out;
+      pointer-events: none;
+    }
+
+    .sparkle1 { top: -10px; left: 20%; animation-delay: 0s; }
+    .sparkle2 { top: -10px; right: 25%; animation-delay: 2s; }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493; }
+      50% { text-shadow: 0 0 20px #ff1493, 0 0 40px #ff69b4; }
+    }
+
+    .animate-loveGlow {
+      animation: glow 2s infinite ease-in-out;
+    }
+
+    @keyframes floatFire {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-80px); opacity: 0; }
+    }
+
+    /* Video fade-in */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    /* Heart float */
+    @keyframes heartFloat {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-40px) scale(1.2); opacity: 0; }
+    }
+
+    .animate-heart {
+      animation: heartFloat 4s ease-in-out infinite;
+    }
+    @keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493; }
+  50% { text-shadow: 0 0 20px #ff1493, 0 0 40px #ff69b4; }
+}
+.animate-loveGlow {
+  animation: glow 2s infinite ease-in-out;
+}
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 6px #ff69b4, 0 0 12px #ff1493; }
+  50% { text-shadow: 0 0 12px #ff1493, 0 0 24px #ff69b4; }
+}
+.animate-loveGlow {
+  animation: glow 2s infinite ease-in-out;
+}
+@keyframes glowGift {
+  0%, 100% { box-shadow: 0 0 12px #ff99cc, 0 0 24px #ff66b2; }
+  50% { box-shadow: 0 0 24px #ff66b2, 0 0 48px #ff99cc; }
+}
+
+.animate-giftGlow {
+  animation: glowGift 2s infinite ease-in-out;
+}
+
+  </style>
+</head>
+
+<body class="font-sans text-pink-900">
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4">
+    <h1 class="text-5xl md:text-7xl font-bold">Payal ❤️</h1>
+    <p class="mt-6 text-lg italic">"Every love story is beautiful, but ours is my favorite."</p>
+    <button onclick="scrollToSection('timeline')" class="mt-10 px-6 py-3 bg-pink-500 text-white rounded-full hover:bg-pink-600">Explore Our Journey</button>
+  </section>
+
+  <!-- Timeline Section -->
+  <!-- Timeline Section -->
+<section id="timeline" class="min-h-screen bg-white px-4 py-12">
+  <h2 class="text-3xl font-semibold text-center mb-10">Our Journey</h2>
+
+  <!-- Timeline Cards -->
+  <div class="space-y-8 max-w-2xl mx-auto mb-12">
+    <div class="bg-pink-100 p-4 rounded-xl shadow flex items-center gap-2">📅 Met on: 5th Grade – The day my life changed forever</div>
+    <div class="bg-pink-100 p-4 rounded-xl shadow flex items-center gap-2">🌸 Feelings Starts: 11 July 2025 – Valentine’s magic ✨</div>
+    <div class="bg-pink-100 p-4 rounded-xl shadow flex items-center gap-2">💑 My Confession: 26 Aug 2025 – Journey To Her Heart 💘</div>
+  </div>
+
+  <!-- Illustration Images -->
+  <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+    <!-- Illustration 1 -->
+    <div class="bg-pink-50 p-4 rounded-2xl shadow-lg border border-pink-200 animate-fade-in">
+      <img src="assets/ChatGPT Image Jul 13, 2025, 06_29_07 PM.png" alt="Illustration 1" class="rounded-xl w-full h-auto" />
+      <p class="mt-4 italic text-pink-600 text-center">“Always You In My Eyes..”</p>
+    </div>
+
+    <!-- Illustration 2 -->
+    <div class="bg-pink-50 p-4 rounded-2xl shadow-lg border border-pink-200 animate-fade-in">
+      <img src="assets/ChatGPT Image Jul 13, 2025, 05_28_01 PM.png" alt="Illustration 2" class="rounded-xl w-full h-auto" />
+      <p class="mt-4 italic text-pink-600 text-center">“And time stopped forever.”</p>
+    </div>
+  </div>
+</section>
+<!-- 🌙 Moon Surprise Section -->
+<section class="bg-gradient-to-b from-white to-pink-50 py-20 text-center relative">
+  <h2 class="text-3xl font-bold text-pink-700 mb-8">Touch the Moon 🌙</h2>
+
+  <!-- Glowing Moon Button -->
+  <button onclick="showMoonPopup()" class="w-24 h-24 rounded-full bg-gradient-to-br from-yellow-200 to-pink-300 shadow-xl text-4xl animate-pulse transition hover:scale-110 duration-500">
+    🌙
+  </button>
+</section>
+
+  <!-- Video Section -->
+  <section id="video" class="bg-pink-100 py-16 px-4 text-center relative overflow-hidden">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8">A Special Moment 🎥</h2>
+    <div class="max-w-3xl mx-auto rounded-3xl border-4 border-pink-400 shadow-lg overflow-hidden animate-fade-in">
+      <video controls class="w-full h-auto rounded-2xl">
+        <source src="assets/Copy of This is Not about Me.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p class="mt-6 text-pink-700 text-lg italic">A memory captured forever, just for us 💞</p>
+    <!-- Floating hearts -->
+    <div class="absolute inset-0 pointer-events-none z-0">
+      <div class="absolute text-2xl animate-heart top-10 left-10">💗</div>
+      <div class="absolute text-2xl animate-heart top-32 right-16">💘</div>
+      <div class="absolute text-2xl animate-heart bottom-16 left-1/2">💕</div>
+    </div>
+  </section>
+
+  <!-- Message Section -->
+  <section class="bg-pink-50 px-6 py-16 text-center">
+    <h2 class="text-3xl font-bold mb-4">A Message for You</h2>
+    <p class="max-w-2xl mx-auto text-lg">
+      From the moment I met you, my world became brighter. This website is a small surprise to remind you how special you are to me. I’ll always be by your side, through every chapter of our journey. ❤️
+    </p>
+  </section>
+
+  <!-- Surprise Section -->
+  <section class="bg-gradient-to-r from-pink-200 to-pink-400 text-center py-20">
+    <h2 class="text-4xl font-bold mb-6">🎉 Surprise! 🎉</h2>
+    <p class="text-xl">You’re the most precious part of my life. I hope this made you smile 😊</p>
+  </section>
+
+  <!-- Illustrations Section -->
+  <section class="bg-white py-16 px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10 text-pink-700">Memories in Art 🖼️</h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div class="animate-fade-in p-4 rounded-2xl bg-pink-50 shadow-lg border border-pink-200">
+        <img src="assets/ChatGPT Image Jul 13, 2025, 05_28_01 PM.png" class="rounded-xl w-full" />
+        <p class="mt-4 italic text-pink-600">“Our first spark”</p>
+      </div>
+      <div class="animate-fade-in p-4 rounded-2xl bg-pink-50 shadow-lg border border-pink-200">
+        <img src="assets/ChatGPT Image Jul 13, 2025, 11_42_22 AM.png" class="rounded-xl w-full" />
+        <p class="mt-4 italic text-pink-600">“Forever yours”</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Final Confession Section -->
+  <section id="final-love" class="relative w-full h-screen bg-gradient-to-b from-pink-100 to-pink-300 flex flex-col items-center justify-center text-center px-6 overflow-hidden z-50">
+    <h2 class="text-6xl md:text-8xl font-extrabold text-pink-700 drop-shadow-xl animate-loveGlow z-10">
+      Friends ??
+    </h2>
+    <p class="text-xl mt-6 text-pink-800 z-10 italic">
+      From my heart to yours — forever yours, <strong>Deepanshu</strong>
+    </p>
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas" class="absolute inset-0 w-full h-full z-0 pointer-events-none"></canvas>
+    <!-- Fireworks Background -->
+    <div id="fireworks" class="absolute inset-0 pointer-events-none z-0"></div>
+  </section>
+  <!-- Animated Love Reasons Section -->
+<section class="bg-gradient-to-br from-pink-50 to-pink-100 py-20 px-6 text-center">
+  <h2 class="text-4xl font-bold text-pink-700 mb-8">10 Reasons Why I Care For You 💘</h2>
+  <ul class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left text-pink-800 text-lg">
+    <li class="bg-white p-4 rounded-xl shadow-md animate-fade-in">1. Apki Class Me AAyi Har smile Bhot Pyarri Thii</li>
+    <li class="bg-white p-4 rounded-xl shadow-md animate-fade-in delay-100">2. Mujhe AApke Eyes Me Kabhi Mere Liye Feel Naii Hua..</li>
+    <li class="bg-white p-4 rounded-xl shadow-md animate-fade-in delay-200">3. But Me Apne AAp Ko smjhata Rehta Hu Ki naii Me Glt Huu.</li>
+    <li class="bg-white p-4 rounded-xl shadow-md animate-fade-in delay-300">4. Aap Apne Hairs Ko Swarte Huye humesha Bhot Pyare lagte hoo.</li>
+    <li class="bg-white p-4 rounded-xl shadow-md animate-fade-in delay-400">5. You’re my calm and chaos, both.</li>
+    <li class="bg-white p-4 rounded-xl shadow-md animate-fade-in delay-500">6. AAp Bhot Smart Ho But Me Thoda Kam Hu..
+    <li class="bg-white p-4 rounded-xl shadow-md animate-fade-in delay-600">7. Mujhe Pta hai ki Ye humara Last Chance Hai Aap Distract naii Hona Is sab se.</li>
+    <li class="bg-white p-4 rounded-xl shadow-md animate-fade-in delay-700">8. You’re beautiful, inside and out.</li>
+    <li class="bg-white p-4 rounded-xl shadow-md animate-fade-in delay-800">9. Your laughter is music to my soul.</li>
+    <li class="bg-white p-4 rounded-xl shadow-md animate-fade-in delay-900">10. Because you’re YOU — and I’m lucky to have you.</li>
+  </ul>
+</section>
+
+<!-- Hidden Moon Modal -->
+<div id="moonModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-80 flex items-center justify-center">
+  <div class="bg-pink-100 rounded-3xl p-6 shadow-2xl text-center relative max-w-md w-full animate-fade-in">
+    <!-- Close Button -->
+    <button onclick="hideMoonPopup()" class="absolute top-3 right-4 text-2xl text-pink-700 hover:text-red-500">✖</button>
+
+    <!-- Her Image -->
+    <img src="assets/her.png" alt="Her Image" class="w-40 h-40 mx-auto rounded-full shadow-lg ring-4 ring-pink-300" />
+
+    <!-- Romantic Quote -->
+    <p class="mt-6 text-lg italic text-pink-800 animate-loveGlow">
+      "In your eyes, I see the moonlight, in your heart, I found my home." 💖
+    </p>
+  </div>
+</div>
+
+
+<!-- Romantic Music Player (Glass Style) -->
+<div class="fixed bottom-6 right-6 z-50">
+  <div class="backdrop-blur-xl bg-white/30 border border-pink-200 shadow-2xl rounded-full px-6 py-3 flex items-center gap-3 transition hover:shadow-pink-300">
+    <button onclick="toggleMusic()" id="musicBtn"
+      class="text-2xl text-pink-700 hover:text-pink-900 transition duration-300">
+      🎵
+    </button>
+    <p id="lyricsText" class="text-sm text-pink-800 italic animate-loveGlow hidden sm:block">"You are the reason my heart beats..."</p>
+  </div>
+</div>
+
+
+ <div class="space-y-8 mt-10 max-w-2xl mx-auto mb-12">
+    <div class="bg-pink-100 p-4 rounded-xl shadow flex items-center gap-2">Mein AAp Par Force Naii Dalna Chahta Ki AAp Bhi Mujhe Like Karo Mujhe Ye Bhi Naii pta ki aapko Koii aur psnd hai ya naii bss me apni feelings Bina bataye naii reh sakta Me Dost Pehle Bnna Chahta Huu Agr aap Dost Hi banna hi chahte ho..
+      Me Kabhi Ye baat aapko Naii Bol sakta directly Isliye Is Way me Bola Bss EK request Hai ye mat Sochna ki Merko bura lagega ya naii bss Saachi Sochke answer dena Bss AAp Meri Taraf Dekhkar Yes Or No Me Head move karna bss Ya Neeche Answer Dena please
+      Or Agr Bura lage to please Gussa Mat Hona Agr No Hai To..
+    </div>
+    
+  </div>
+<!-- Proposal Response Section -->
+<section id="proposal" class="bg-gradient-to-r from-pink-100 to-pink-200 py-16 text-center relative">
+  <h2 class="text-3xl md:text-4xl font-bold text-pink-600 mb-6 animate-loveGlow">
+    Will You Be With Me? 💖
+  </h2>
+  <p class="text-lg text-pink-700 mb-8 italic">Choose honestly… your answer means the world to me 🌍</p>
+
+  <!-- Beautiful Yes/No Checkboxes -->
+  <div class="flex justify-center gap-10">
+    <!-- YES Option -->
+    <label class="cursor-pointer group">
+      <input type="radio" name="proposal" value="yes" class="hidden peer" onchange="saveResponse(this.value)" />
+      <div class="w-32 h-32 bg-white rounded-2xl shadow-lg flex flex-col items-center justify-center border-4 border-pink-400 peer-checked:bg-pink-500 peer-checked:text-white transition-all duration-500 group-hover:scale-105">
+        <span class="text-4xl">✅</span>
+        <span class="mt-2 font-bold text-lg">YES</span>
+      </div>
+    </label>
+
+    <!-- NO Option -->
+    <label class="cursor-pointer group">
+      <input type="radio" name="proposal" value="no" class="hidden peer" onchange="saveResponse(this.value)" />
+      <div class="w-32 h-32 bg-white rounded-2xl shadow-lg flex flex-col items-center justify-center border-4 border-gray-400 peer-checked:bg-gray-600 peer-checked:text-white transition-all duration-500 group-hover:scale-105">
+        <span class="text-4xl">❌</span>
+        <span class="mt-2 font-bold text-lg">NO</span>
+      </div>
+    </label>
+  </div>
+
+  <!-- Response Message -->
+  <p id="responseMsg" class="mt-8 text-xl text-pink-800 font-semibold"></p>
+</section>
+
+<script>
+  // Save response locally
+  function saveResponse(value) {
+    localStorage.setItem("proposalResponse", value);
+
+    const msg = document.getElementById("responseMsg");
+    if (value === "yes") {
+      msg.textContent = "💖 She said YES! My happiest moment ever 💖";
+    } else {
+      msg.textContent = "😢 She said NO… but I’ll still respect your choice. Thanks Ab Kabhi Pareshan Naii karungaa..";
+    }
+  }
+
+  // Show saved response if exists
+  window.addEventListener("load", () => {
+    const saved = localStorage.getItem("proposalResponse");
+    if (saved) saveResponse(saved);
+  });
+</script>
+
+<!-- Hidden Audio -->
+<audio id="bgMusic" src="assets/message.mp3" preload="auto" loop></audio>
+
+<script>
+  const music = document.getElementById('bgMusic');
+  const musicBtn = document.getElementById('musicBtn');
+  const lyrics = document.getElementById('lyricsText');
+  let isPlaying = false;
+
+  function toggleMusic() {
+    if (isPlaying) {
+      music.pause();
+      musicBtn.textContent = '🔇';
+      lyrics.textContent = '"Paused... waiting for your touch again 💞"';
+    } else {
+      music.play();
+      musicBtn.textContent = '🎵';
+      lyrics.textContent = '"You are the reason my heart beats..."';
+    }
+    isPlaying = !isPlaying;
+  }
+
+  // Optional: Autoplay muted
+  window.addEventListener('load', () => {
+    music.volume = 0.5;
+    // music.play(); // uncomment if you want autoplay (browser may block)
+  });
+</script>
+
+
+
+
+  <!-- Scripts -->
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Floating hearts
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.innerText = "💖";
+      heart.className = "heart text-3xl";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }, 500);
+
+    // Hover sound
+    function playSound() {
+      const audio = document.getElementById("hoverSound");
+      if (audio) {
+        audio.currentTime = 0;
+        audio.play();
+      }
+    }
+
+    // Confetti
+    const canvas = document.getElementById('confettiCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let confetti = [];
+    function random(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    function createConfetti() {
+      for (let i = 0; i < 150; i++) {
+        confetti.push({
+          x: random(0, canvas.width),
+          y: random(0, canvas.height),
+          r: random(2, 6),
+          color: `hsl(${random(0, 360)}, 100%, 70%)`,
+          speedY: random(1, 3),
+          speedX: random(-1, 1),
+        });
+      }
+    }
+
+    function drawConfetti() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      confetti.forEach(c => {
+        ctx.beginPath();
+        ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
+        ctx.fillStyle = c.color;
+        ctx.fill();
+        c.y += c.speedY;
+        c.x += c.speedX;
+
+        if (c.y > canvas.height) c.y = 0;
+        if (c.x > canvas.width) c.x = 0;
+        if (c.x < 0) c.x = canvas.width;
+      });
+    }
+
+    createConfetti();
+    setInterval(drawConfetti, 20);
+
+    // Fireworks
+    function triggerFireworks() {
+      for (let i = 0; i < 20; i++) {
+        const fire = document.createElement('div');
+        fire.innerText = '🎆';
+        fire.style.position = 'absolute';
+        fire.style.top = `${Math.random() * 80 + 10}%`;
+        fire.style.left = `${Math.random() * 100}%`;
+        fire.style.fontSize = `${Math.random() * 2 + 1.5}rem`;
+        fire.style.animation = 'floatFire 3s ease-out forwards';
+        document.getElementById('fireworks').appendChild(fire);
+        setTimeout(() => fire.remove(), 3000);
+      }
+    }
+
+    setInterval(triggerFireworks, 4000);
+  </script>
+  <script>
+  function showMoonPopup() {
+    document.getElementById("moonModal").classList.remove("hidden");
+  }
+
+  function hideMoonPopup() {
+    document.getElementById("moonModal").classList.add("hidden");
+  }
+  
+</script>
+
+
+  <!-- Romantic Footer -->
+<footer class="bg-pink-200 text-center py-6 mt-2">
+  <p class="text-pink-800 text-lg italic">💌 Made with all my heart for you, Payal 💖</p>
+  <p class="text-sm text-pink-700 mt-2">Forever yours – Deepanshu</p>
+</footer>
+</body>
+</html>
